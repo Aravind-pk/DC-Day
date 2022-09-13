@@ -12,7 +12,7 @@ const Layout = ({ title, children }) => {
     <div className='min-h-screen  flex flex-col justify-between'>
 
       <header>
-        <nav className='flex h-12 items-center px-4 justify-between shadow-sm'>
+        <nav className='flex h-16 items-center px-16  justify-between'>
             <Link href='/'>
                 <a className='text-lg font-bold'> DC Day</a>
             </Link>

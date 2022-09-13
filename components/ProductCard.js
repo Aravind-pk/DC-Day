@@ -5,13 +5,13 @@ import Link from 'next/link';
 
 const ProductCard = ({ product }) => {
   return (
-    <div className="card ">
+    <div className="mb-5 block rounded-lg  shadow-md ">
       <Link href={`/product/${product.slug}`}>
         <a className='flex justify-center'>
           <img
             src={product.image}
             alt={product.name}
-            className="rounded outline outline-1 outline-neutral-400"
+            className="py-4 border-b "
           />
         </a>
       </Link>
