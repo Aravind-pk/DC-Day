@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import  { useRouter } from 'next/router';
 import React, { useContext } from 'react';
 import Layout from '../../components/Layout';
 import data from '../../utils/data';
@@ -8,6 +8,7 @@ import { Store } from '../../utils/Store';
 
 const ProductDetails = () => {
   const { state, dispatch } = useContext(Store);
+  const router = useRouter()
   const slug = useRouter().query.slug;
   const product = data.products.find((x) => x.slug == slug);
 
@@ -30,6 +31,8 @@ const ProductDetails = () => {
       type: 'CART_ADD_ITEM',
       payload: { ...product, quantity: quantity },
     });
+
+    router.push('/cart')
   };
 
   return (

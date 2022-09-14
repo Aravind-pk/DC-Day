@@ -40,8 +40,8 @@ const data = {
     },
 
     {
-      name: 'Usb jack',
-      slug: 'usb-jacka',
+      name: 'else',
+      slug: 'else',
       category: 'Others',
       image: '/images/img1.jpg',
       price: 8000,
@@ -52,8 +52,8 @@ const data = {
       description: ' jlfalfaiie ie m iagam agima',
     },
     {
-        name: 'Usb jack',
-        slug: 'usb-jackaa',
+        name: 'wire',
+        slug: 'wire',
         category: 'Others',
         image: '/images/img1.jpg',
         price: 8000,
