@@ -1,11 +1,17 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Store } from '../utils/Store';
 
 const Layout = ({ title, children }) => {
-  const { state, dispatch } = useContext(Store);
-  const cart = state.cart
+  const { state } = useContext(Store);
+  const cart = state.cart;
+  const [cartCount, setCartCount] = useState(0)
+
+  useEffect(() => {
+      setCartCount(cart.cartItems.reduce((a,item) => a + item.quantity , 0))
+  }, [cart.cartItems])
+  
 
   return (
     <>
@@ -26,8 +32,8 @@ const Layout = ({ title, children }) => {
 
               <button type="button" className="inline-flex items-center px-5 py-2.5 text-sm text-center primary-button">
               Cart
-  { cart.cartItems.length > 0 && ( <span className="inline-flex justify-center items-center ml-2 w-4 h-4 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full">
-  {cart.cartItems.reduce((a,item) => a + item.quantity , 0)}
+  { cartCount > 0 && ( <span className="inline-flex justify-center items-center ml-2 w-4 h-4 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full">
+  {cartCount}
   </span>)}
 </button>
 

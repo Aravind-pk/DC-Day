@@ -4,6 +4,7 @@ import Layout from '../components/Layout';
 import Link from 'next/link';
 import Image from 'next/image';
 import data from '../utils/data';
+import dynamic from 'next/dynamic';
 
 
 const CartPage = () => {
@@ -126,4 +127,5 @@ const CartPage = () => {
   );
 };
 
-export default CartPage;
+
+export default dynamic (() => Promise.resolve  (CartPage) , {ssr:false} ) 
