@@ -5,12 +5,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 import data from '../utils/data';
 import dynamic from 'next/dynamic';
+import { useRouter } from 'next/router';
 
 
 const CartPage = () => {
   const { state, dispatch } = useContext(Store);
 
   const cartItems = state.cart.cartItems;
+
+  const router = useRouter()
 
   const removeItemHandler = (item) => {
     dispatch({ type: 'CART_REMOVE_ITEM', payload: item });
@@ -113,7 +116,8 @@ const CartPage = () => {
               </li>
               <li>
                 <button
-                  className="primary-button w-full"
+                onClick={() => router.push('login?redirect=/shipping')}
+                className="primary-button w-full"
                 >
                   Check Out
                 </button>
