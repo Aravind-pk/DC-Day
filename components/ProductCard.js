@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const ProductCard = ({ product }) => {
   return (
-    <div className="mb-5 block rounded-lg  shadow-md ">
+    <div className="mb-5 border border-gray-300  rounded-xl ">
       <Link href={`/product/${product.slug}`}>
         <a className='flex justify-center'>
           <img
@@ -19,11 +19,12 @@ const ProductCard = ({ product }) => {
       <div className="flex flex-col items-center justify-center p-5">
         <Link href={`/product/${product.slug}`}>
           <a>
-            <h2 className="text-lg">{product.name}</h2>
+            <h2 className="text-lg text-blue-900 font-bold">{product.name}</h2>
           </a>
         </Link>
-        <p>{product.company}</p>
-        <p>${product.price}</p>
+        <div className="badge badge-lg badge-outline m-1"> Company : {product.company} </div>
+
+        <p className='text-lg font-bold pb-4' >Rs. {product.price}</p>
         <button className="primary-button" type="button">
           Add to cart
         </button>
