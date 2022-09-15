@@ -40,6 +40,7 @@ const CartPage = () => {
       ) : (
         <div className="grid md:grid-cols-4 md:gap-5">
           <div className="overflow-x-auto md:col-span-3">
+            <p className='font-light text-red-600 '>** The rental amount is 10 percentage of the actual component cost</p>
             <table className="table table-compact min-w-full">
               <thead>
                 <tr>
@@ -111,6 +112,15 @@ const CartPage = () => {
                   <span className='font-bold'>
 
                    : Rs {cartItems.reduce((a, c) => a + c.quantity * c.price, 0)}
+                  </span>
+                </div>
+              </li>
+              <li>
+                <div className="py-4 text-xl flex justify-between">
+                  Rental amount <span className='text-red-600'>*</span> 
+                  <span className='font-bold'>
+
+                   : Rs {cartItems.reduce((a, c) => a + c.quantity * c.price, 0) *(10/100)}
                   </span>
                 </div>
               </li>

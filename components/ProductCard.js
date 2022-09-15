@@ -22,7 +22,7 @@ const ProductCard = ({ product }) => {
             <h2 className="text-lg text-blue-900 font-bold">{product.name}</h2>
           </a>
         </Link>
-        <div className="badge badge-lg badge-outline m-1"> Company : {product.company} </div>
+        <div className=" m-1"> {product.company} </div>
 
         <p className='text-lg font-bold pb-4' >Rs. {product.price}</p>
         <button className="primary-button" type="button">

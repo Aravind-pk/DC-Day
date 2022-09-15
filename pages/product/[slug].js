@@ -64,7 +64,7 @@ const ProductDetails = () => {
           </ul>
         </div>
         <div>
-          <div className="block mx-4 p-8 rounded-lg  shadow-md">
+          <div className="block mx-4 p-8  border border-gray-300  rounded-xl">
             <div className="mb-2 flex justify-between">
               <div>Prize</div>
               <div> {product.price}</div>
