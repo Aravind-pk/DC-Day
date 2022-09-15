@@ -116,7 +116,7 @@ const CartPage = () => {
               </li>
               <li>
                 <button
-                onClick={() => router.push('login?redirect=/shipping')}
+                onClick={() => router.push('login?redirect=/borrow')}
                 className="primary-button w-full"
                 >
                   Check Out

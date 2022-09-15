@@ -8,6 +8,7 @@ const initialState = {
     ? JSON.parse(Cookies.get('cart'))
     : {
         cartItems: [],
+        projectDetails:[]
       },
 };
 
@@ -37,6 +38,19 @@ const reducer = (state, action) => {
       Cookies.set('cart', JSON.stringify({ ...state.cart, cartItems }));
       return { ...state, cart: { ...state.cart, cartItems } };
     }
+
+    case 'SAVE_PROJECT_DETAILS':
+      return {
+        ...state,
+        cart: {
+          ...state.cart,
+          projectDetails: {
+            ...state.cart.projectDetails,
+            ...action.payload,
+          },
+        },
+      };
+
     default:
       return state;
   }

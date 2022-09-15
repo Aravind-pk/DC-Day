@@ -13,6 +13,7 @@ const Layout = ({ title, children }) => {
   const { state , dispatch} = useContext(Store);
   const cart = state.cart;
   const [cartCount, setCartCount] = useState(0);
+  
 
   useEffect(() => {
     setCartCount(cart.cartItems.reduce((a, item) => a + item.quantity, 0));
@@ -22,7 +23,8 @@ const Layout = ({ title, children }) => {
   const logoutHandler = () => {
     Cookies.remove('cart');
     dispatch({ type: 'CART_RESET' });
-    signOut({ callbackUrl: '/login' });
+    signOut({ callbackUrl: '/' });
+
   };
 
 
