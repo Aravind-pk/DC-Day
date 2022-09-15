@@ -40,7 +40,7 @@ const CartPage = () => {
       ) : (
         <div className="grid md:grid-cols-4 md:gap-5">
           <div className="overflow-x-auto md:col-span-3">
-            <table className="min-w-full">
+            <table className="table table-compact min-w-full">
               <thead>
                 <tr>
                   <th className="p-2 text-center  md:p-5">Item</th>

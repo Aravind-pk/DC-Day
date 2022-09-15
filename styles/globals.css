@@ -27,5 +27,5 @@ a {
 }
 
 .primary-button {
-  @apply  rounded-3xl  bg-blue-700 py-2 px-4 outline-none hover:bg-blue-800 active:bg-blue-900 text-white;
+  @apply  rounded-box  bg-blue-700 py-2 px-4 outline-none hover:bg-blue-800 active:bg-blue-900 text-white;
 }
