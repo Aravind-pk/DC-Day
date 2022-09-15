@@ -8,3 +8,8 @@ DC day is a full stack e-commerce app made using
 - daisyUI
 - mongoDB 
 
+# screenshots
+
+![Alt text](/public/images/Screenshot%20(186).png?raw=true "Title")
+![Alt text](/public/images/Screenshot%20(187).png.png?raw=true  "Title")
+
